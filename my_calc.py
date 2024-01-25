@@ -1,8 +1,10 @@
 import numpy as np
+from MyClass import MyClass as mc
 
-x_len = 5
+x_length = int(input('How many arrays of 100? '))  # Not the best error handling!
 y_len = 100
-a = np.random.randint(1, 100, [x_len, y_len])
+a = np.random.randint(1, 100, [x_length, y_len])
 
-for i in range(0, 5):
-    print(a[i].mean())
+for i in range(0, x_length):
+    # print(a[i].mean())
+    print(mc.superfluousMean(a[i]))
